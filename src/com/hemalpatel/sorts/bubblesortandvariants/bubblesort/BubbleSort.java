@@ -19,13 +19,14 @@ public class BubbleSort implements SortAlgorithm {
 		int end = data.size() - 1;
 		int tempVar = 0;
 		for(int outer = end; outer > 0; outer--) {
-			for(int inner = start; inner < end - 1; inner++) {
+			for(int inner = start; inner < end; inner++) {
 				if(data.get(inner) > data.get(inner + 1)) {
 					tempVar = data.get(inner);
 					data.set(inner, data.get(inner + 1));
 					data.set(inner + 1, tempVar);
 				}
 			}
+			end--;
 		}
 		return data;
 	}

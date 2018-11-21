@@ -37,7 +37,7 @@ public interface BaseSortingExecutor {
 	
 	default void printList(String message, List<Integer> data) {
 		System.out.println(message);
-		for(int loop = 0; loop < data.size() - 1; loop++) {
+		for(int loop = 0; loop < data.size(); loop++) {
 			System.out.print(data.get(loop) + " ");
 		}
 		System.out.println("\n");
